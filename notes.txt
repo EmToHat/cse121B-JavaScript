@@ -1,0 +1,41 @@
+There are several ways to access HTML elements.
+----
+# getElementById
+document.getElementById('elementId')
+    - In real code, the id "elementId" is replaced by an actual, unqiue id. 
+    - Example: 
+        <section id="dicussion">
+        let theDiscussionElement = document.getElementById('dicussion')
+
+# querySelector 
+document.querySelector('#elementId')
+    - In real code, the "elementId" would be replaced by an actual, unique id.
+    - the pound sign (#) is required before the name of the id value.
+    - Example:
+        <section id="dicussion">
+        let theDiscussionElement = document.querySelector('#discussion');
+
+
+Modifying HTML elements using JS
+----
+After accessing an HTML element, you can change its content by using one of two properties, 
+the first of which uses the element's __ innerHTML __ property.
+    - Example:
+        document.querySelector('#discussion').innerHTML = 'The content I would like to
+        display in the HTML file.';
+
+Another simlar way uses the __ textContent __ property.
+    - Example:
+        document.querySelector('#discussion').textContent = 'The content I would like to
+        display in the HTML file.';
+
+You can also modify an HTML element using the __ setAttribute __ method. 
+To change the picture displayed in an img tag modify the src property of
+the image element. 
+    - Example:
+        document.querySelector('#mainImage')
+		        .setAttribute('src', 'images/main.png');
+        
+        OR
+
+        document.querySelector('#mainImage').src = 'images/main.png';
